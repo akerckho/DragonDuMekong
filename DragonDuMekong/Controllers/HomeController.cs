@@ -15,13 +15,27 @@ namespace DragonDuMekong.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var owner = new User("Temp");
+            var gameCreator = new GameLobby(owner); 
+            return View(gameCreator);
         }
 
         public IActionResult Privacy()
         {
             return View();
         }
+        public IActionResult Rules()
+        {
+            return View();
+        }
+
+        public IActionResult GuestJoining()
+        {
+
+            var guest = new User("Temp2");
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

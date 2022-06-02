@@ -1,8 +1,11 @@
-﻿@{
+﻿@model DragonDuMekong.Models.GameLobby
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Hello World</p>
+    <h1 class="display-4">Welcome to @Model.GameName</h1>
+    <button name="inviteButton"> Create private lobby</button>
+    
+
 </div>
